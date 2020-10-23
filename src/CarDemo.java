@@ -35,5 +35,9 @@ public class CarDemo {
     System.out.println(car1.model + " kostar " + car1.price + "kr");
     System.out.printf("%s kostar %,d kr \n", car1.model , car1.price);
 
+    Car car3 = new Car();
+    car3.price = 50000;
+    car3.model = "Audi";
+    car3.year = 1999;
   }
 }
