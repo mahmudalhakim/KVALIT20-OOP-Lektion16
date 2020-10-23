@@ -1,3 +1,4 @@
+
 /**
  * Created by Mahmud Al Hakim
  * Date: 2020-10-23
@@ -48,9 +49,29 @@ public class PointDemo {
 
     // Beräkna mittpunkten
     Point midpoint = Point.midPoint(p1, p2);
-    System.out.print("Mittpunkten är " );
+    System.out.print("Mittpunkten är ");
     Point.print(midpoint);
 
+    // Lite om tilldelningar mellan referenser
+    p1 = p2;  // referenserna kopieras
+    print(p1, p2);
+    // p1 och p2 pekar på samma punkt
+
+    // Jämförelse mellan referenser
+    System.out.println(p1 == p2);
+    // true eftersom p1 och p2 pekar på samma objekt
+
+    System.out.println(p1 == midpoint);
+    // false eftersom p1 och midpoint pekar på två olika punkter
+
+    Point p3 = new Point();
+    p3.x = 5;
+    p3.y = 5;
+    Point p4 = new Point();
+    p4.x = 5;
+    p4.y = 5;
+    System.out.println(p3 == p4);
+    // false (två olika punkter)
 
   }
 
