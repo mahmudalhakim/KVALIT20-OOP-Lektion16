@@ -17,12 +17,29 @@ public class PointDemo {
     System.out.println("p2 = " + p2);
 
     // Skriv ut punkterna
-    System.out.println("p1: (" + p1.x + " , " + p1.y + ")" );
-    System.out.println("p2: (" + p2.x + " , " + p2.y + ")" );
+    System.out.println("p1(" + p1.x + " , " + p1.y + ")" );
+    System.out.println("p2(" + p2.x + " , " + p2.y + ")" );
 
     // Flytta punkt 1 (p1)
     p1.x = 5;   // Flytta 5 steg till höger
     p1.y = -5;  // Flytta 5 steg neråt
+
+    // Beräkna avståndet mellan p1 och p2
+    double d = Point.distance(p1,p2);
+    System.out.printf("Avstånd = %.2f \n" , d);
+
+    // Flytta punkt 1
+    p1.x = 10;
+    p1.y = 0;
+
+    System.out.printf("Avstånd = %.2f \n" , Point.distance(p1,p2));
+    System.out.printf("Avstånd = %.2f \n" , Point.distance(p2,p1));
+
+    // Flytta punkt 1
+    p1.x = 3;
+    p1.y = 4;
+
+    System.out.printf("Avstånd = %.2f \n" , Point.distance(p1,p2));
 
   }
 }
