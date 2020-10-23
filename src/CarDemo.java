@@ -24,6 +24,16 @@ public class CarDemo {
     Car car2 = new Car();
     System.out.println(car2); // Car@3f99bd52
 
+    // Arbeta med instansvariabler (egenskaper)
+    car1.model = "Volvo";
+    car1.year = 2020;
+    car1.price = 350_000;
+
+    car2.model = "Saab";
+    car2.price = 250_000;
+
+    System.out.println(car1.model + " kostar " + car1.price + "kr");
+    System.out.printf("%s kostar %,d kr \n", car1.model , car1.price);
 
   }
 }
